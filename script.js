@@ -75,10 +75,21 @@ document.querySelectorAll("#mobile-menu a").forEach(a => {
 
 // ===== CV Download =====
 document.querySelectorAll(".cv-download").forEach(btn => {
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    const cvUrl = "assets/CV_LesegoPitso_.pdf";
+
+    // Automatically download to device
     const link = document.createElement("a");
-    link.href = "Lesego_Pitso_CV.pdf";
-    link.download = "Lesego_Pitso_CV.pdf";
+    link.href = cvUrl;
+    link.download = "CV_LesegoPitso_.pdf";
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
+
+    // Automatically open in the same tab/window
+    setTimeout(() => {
+      window.location.href = cvUrl;
+    }, 100);
   });
 });
