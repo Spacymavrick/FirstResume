@@ -200,9 +200,11 @@ section.alt { background: hsl(var(--card) / 0.3); }
 .project-card-placeholder { border-style: dashed; opacity: 0.85; }
 .project-card-placeholder:hover { opacity: 1; border-color: hsl(var(--primary) / 0.5); }
 .project-badge { font-size: 0.75rem; font-family: 'JetBrains Mono', monospace; color: hsl(var(--accent)); background: hsl(var(--accent) / 0.1); border: 1px solid hsl(var(--accent) / 0.3); padding: 2px 8px; border-radius: 4px; }
-.view-all { text-align: center; margin-top: 40px; }
-.view-all a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border: 1px solid hsl(var(--primary) / 0.4); color: hsl(var(--primary)); font-weight: 600; border-radius: 6px; font-size: 0.875rem; transition: background 0.2s; }
-.view-all a:hover { background: hsl(var(--primary) / 0.1); }
+.view-all { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 16px; margin-top: 40px; }
+.view-all a { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border: 1px solid hsl(var(--primary) / 0.4); color: hsl(var(--primary)); font-weight: 600; border-radius: 6px; font-size: 0.875rem; transition: background 0.2s, border-color 0.2s, transform 0.2s; text-decoration: none; }
+.view-all a:hover { background: hsl(var(--primary) / 0.1); border-color: hsl(var(--primary)); transform: translateY(-2px); }
+.view-all a.btn-download-cert { background: hsl(var(--primary) / 0.1); }
+.view-all a.btn-download-cert:hover { background: hsl(var(--primary) / 0.2); }
 
 /* ===== SKILLS ===== */
 .skill-category { margin-bottom: 32px; }
